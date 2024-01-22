@@ -36,3 +36,5 @@ make run-save
 [xk6 GitHub Repository](https://github.com/grafana/xk6)    used to rebuild k6 binary with web-dasboard plugin.
 
 [xk6 dashboard plugin GitHub Repository](https://github.com/grafana/xk6-dashboard)
+
+[xk6 web dashboard plugin documentation](https://github.com/grafana/xk6-dashboard/blob/master/cmd/k6-web-dashboard/README.md)
