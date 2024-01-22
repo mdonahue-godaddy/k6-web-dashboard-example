@@ -1,8 +1,8 @@
 # load-test-example - docs (Pages)
 
-[Home](/)
+[Home](https://mdonahue-godaddy.github.io/k6-web-dashboard-example/)
 
-[Reports](/reports/)
+[Reports](https://mdonahue-godaddy.github.io/k6-web-dashboard-example/reports/)
 
-[Load Testing](/reports/load-testing/)
+[Load Testing](https://mdonahue-godaddy.github.io/k6-web-dashboard-example/reports/load-testing/)
 
