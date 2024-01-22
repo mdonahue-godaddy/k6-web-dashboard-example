@@ -1,0 +1,9 @@
+# Logs
+*.log
+
+# Project directories for temporary files
+dist
+report
+
+# Generated javascript files
+*.js
