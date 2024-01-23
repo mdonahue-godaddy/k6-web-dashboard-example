@@ -93,7 +93,7 @@ run-save: run
 #	git push origin $(BRANCH) -f --no-verify
 
 .PHONY: all
-all: save-reporting
+all: run-save
 
 .PHONY: usage
 usage:
@@ -103,8 +103,8 @@ usage:
 	@echo "  all - perform all steps"
 	@echo "  clean - clean up build artifacts"
 	@echo "  help - show usage"
-	@echo "  run-k6-load-testing - run load test reports"
-	@echo "  save-reporting - save reports"
+	@echo "  run - run load test reports"
+	@echo "  run-save - run and save reports (commit currently deactivated)"
 	@echo "  usage - show this information"
 
 .PHONY: help
