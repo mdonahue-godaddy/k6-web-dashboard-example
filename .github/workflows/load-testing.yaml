@@ -27,6 +27,10 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: set TS to timestamp string
+        run: |
+          echo "TS=$(date -u +\"%Y-%m-%d_%H%M%SZ\")" >> ${GITHUB_ENV}
+
       - name: actions/checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1
         with:
@@ -112,16 +116,16 @@ jobs:
       - name: version the report files
         run: |
           set -x
-          mkdir -p ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}
-          cp ${{ env.REPORT }}/*                              ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/
-          cp ${{ env.REPORT }}/k6-web-dashboard-report.html  ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/index.html
-          cp ${{ env.DOCS }}/reports/load-testing/README.md   ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md
-          echo "[${{ github.event.number }}](/reports/load-testing/${{ github.event.number }}/index.html)" >> ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md
-          echo "" >> ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md
+          mkdir -p ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}
+          cp ${{ env.REPORT }}/*                              ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/
+          cp ${{ env.REPORT }}/k6-web-dashboard-report.html  ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/index.html
+          cp ${{ env.DOCS }}/reports/load-testing/README.md   ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
+          echo "[${{ env.TS }}](/reports/load-testing/${{ env.TS }}/index.html)" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
+          echo "" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
           # copy README.md to other subdirectories
-          cp ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md  ${{ env.DOCS }}/README.md
-          cp ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md  ${{ env.DOCS }}/reports/README.md
-          cp ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/README.md  ${{ env.DOCS }}/reports/load-testing/README.md
+          cp ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md  ${{ env.DOCS }}/README.md
+          cp ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md  ${{ env.DOCS }}/reports/README.md
+          cp ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md  ${{ env.DOCS }}/reports/load-testing/README.md
 
       # Upload generated artifacts for historical reference
       - name: actions/upload-artifact
@@ -146,7 +150,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -x
-          git add -v -f ${{ env.DOCS }}/reports/load-testing/${{ github.event.number }}/*
+          git add -v -f ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/*
           git add -v -f ${{ env.DOCS }}/README.md
           git add -v -f ${{ env.DOCS }}/reports/README.md
           git add -v -f ${{ env.DOCS }}/reports/load-testing/README.md

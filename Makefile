@@ -3,7 +3,7 @@
 BRANCH:=$(shell git rev-parse --abbrev-ref HEAD)
 COMMIT:=$(shell git log --pretty=format:'%H' -n 1)
 BUILD_DIR:=./dist
-BUILD_TS:=$(shell date -u "+%Y-%m-%dT%TZ")
+BUILD_TS:=$(shell date -u +"+%Y-%m-%d_%H%M%SZ")
 K6:=$(BUILD_DIR)/k6
 REPORT_DIR:=./report
 TSCONFIG:=./tsconfig.json
