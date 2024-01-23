@@ -120,7 +120,7 @@ jobs:
           cp ${{ env.REPORT }}/*                              ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/
           cp ${{ env.REPORT }}/k6-web-dashboard-report.html  ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/index.html
           cp ${{ env.DOCS }}/reports/load-testing/README.md   ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
-          echo "[${{ env.TS }}](/reports/load-testing/${{ env.TS }}/index.html)" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
+          echo "[${{ env.TS }}](https://mdonahue-godaddy.github.io/k6-web-dashboard-example/reports/load-testing/${{ env.TS }}/index.html)" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
           echo "" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
           # copy README.md to other subdirectories
           cp ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md  ${{ env.DOCS }}/README.md
