@@ -5,11 +5,11 @@ This repsitory is one example of how you can implement a simple and purely open 
 This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.
 
 
-## Setup locally:
+## Setup
 
 ### Assumptions
 
-    This document assumes a certain set of commonly used tools such as git, make, and go have already been installed.
+This document assumes a certain set of commonly used tools such as git, make, and go have already been installed.
 
 ### MacOS:
 
@@ -22,10 +22,11 @@ This example uses TypeScript to generate JavaScript code that is compiled dynami
     go install go.k6.io/xk6/cmd/xk6@latest
 
 
-## Running locally:
+## Running
 
-### Run k6 web dashboard locally
-make run
+### Run k6 web dashboard
+
+    make run
 
 ### GitHub Pages for generated reports
 
