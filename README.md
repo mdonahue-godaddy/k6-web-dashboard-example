@@ -49,34 +49,25 @@ k6 takes advantage of Go's speed, power, and efficiency while providing the flex
 k6 is developed by Grafana Labs and the community.
 
 * [k6 Home Page](https://k6.io/)
-
 * [k6 Docuementation](https://grafana.com/docs/k6/latest/)
-
 * [k6 Integrations & Tools](https://k6.io/docs/integrations/)
-
 * [k6 Extentions](https://k6.io/docs/extensions/)
-
 * [k6 Examples](https://k6.io/docs/examples/)
-
 * [k6 GitHub Repository](https://github.com/grafana/k6)
-
 * [xk6 GitHub Repository](https://github.com/grafana/xk6)    used to rebuild k6 binary with web-dasboard plugin.
-
 * [xk6 dashboard plugin GitHub Repository](https://github.com/grafana/xk6-dashboard)
-
 * [xk6 web dashboard plugin documentation](https://github.com/grafana/xk6-dashboard/blob/master/cmd/k6-web-dashboard/README.md)
-
 * [Another example - github.com/BasouKazuma/demo-load-test-k6](https://github.com/BasouKazuma/demo-load-test-k6)
 
 
 ### Other Demos (in no particular order)
 
-[An overview of load testing with k6](https://www.youtube.com/watch?v=ncxCIuo5tUU)
-[Load Tests as Code: An introduction to k6](https://www.youtube.com/watch?v=Y2ba-mhNV90)
-[How to use k6 Cloud](https://www.youtube.com/watch?v=eCv1XshEpDI)
-[Use k6 Load Testing to Manage Performance in Production](https://www.youtube.com/watch?v=aC45-LjDueM)
-[Performance Testing with K6 Demo](https://www.youtube.com/watch?v=5hYjwKAtewc)
-[Automated Load Testing with K6](https://www.youtube.com/watch?v=3TpJItd5JwY)
+* [An overview of load testing with k6](https://www.youtube.com/watch?v=ncxCIuo5tUU)
+* [Load Tests as Code: An introduction to k6](https://www.youtube.com/watch?v=Y2ba-mhNV90)
+* [How to use k6 Cloud](https://www.youtube.com/watch?v=eCv1XshEpDI)
+* [Use k6 Load Testing to Manage Performance in Production](https://www.youtube.com/watch?v=aC45-LjDueM)
+* [Performance Testing with K6 Demo](https://www.youtube.com/watch?v=5hYjwKAtewc)
+* [Automated Load Testing with K6](https://www.youtube.com/watch?v=3TpJItd5JwY)
 
 
 ### Commercial Resources
