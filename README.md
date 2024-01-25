@@ -2,7 +2,7 @@
 
 This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension within a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more resources.
 
-`NOTE: This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.  You can just use JavaScript directly.`
+`NOTE: This example uses TypeScript which is compiled into JavaScript.  You can use JavaScript directly if you prefer.`
 
 
 ## Setup
@@ -36,6 +36,11 @@ This document assumes a certain set of commonly used tools such as git, make, an
 ## Additional Resources
 
 ### Open Source & Community
+
+TypeScript is a strongly typed programming language that builds on and compiles into JavaScript.
+
+[TypeScript](https://www.typescriptlang.org/)
+
 
 k6 is an open source extensible load testing tool built and designed for developers to allow teams to create tests-as-code, integrate performance tests as part of the software development lifecycle, and help users test, analyze, and fix performance issues in their applications.
 
