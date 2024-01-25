@@ -1,8 +1,8 @@
 # k6-web-dashboard-example
 
-This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension into a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more information.
+This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension within a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more resources.
 
-This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.
+`NOTE: This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.  You can just use JavaScript directly.`
 
 
 ## Setup
@@ -78,6 +78,6 @@ This is a great resource for testing global performance, geo-routing, fail over,
 
 Grafana Cloud k6 stores all performance tests until you delete them allowing you to track and compare tests more easily.
 
-NOTE: Using Grafana Cloud k6 requires internet access from Grafana Cloud instances to all resources needed to load test the service under test.  Many services sit behind firewalls or have rules that by design may prevent connectivity within our AWS infrastructure.
+`NOTE: Using Grafana Cloud k6 requires internet access from Grafana Cloud instances to all resources needed to load test the service under test.  Many services sit behind firewalls or have rules that by design may prevent connectivity within our AWS infrastructure.`
 
 [Grafana Cloud k6](https://grafana.com/docs/grafana-cloud/k6/)
