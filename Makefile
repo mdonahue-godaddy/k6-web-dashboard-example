@@ -53,13 +53,8 @@ $(REPORT_DIR):
 	go install go.k6.io/xk6/cmd/xk6@latest
 	xk6 --version
 
-.PHONY: dep
-dep:
-	@echo "Installing xk6"
-	go install go.k6.io/xk6/cmd/xk6@latest
-
 .PHONY: init
-init: dep $(BUILD_DIR) $(REPORT_DIR)
+init: $(BUILD_DIR) $(REPORT_DIR)
 
 $(K6): init
 	@echo "Running xk6 build to generate k6 binary."
