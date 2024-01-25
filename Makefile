@@ -39,6 +39,7 @@ $(REPORT_DIR):
 
 .PHONY: 4macos
 4macos:
+	go version
 	@echo "Installing k6"
 	brew install k6
 	k6 --version
@@ -51,7 +52,6 @@ $(REPORT_DIR):
 	npm install -g @types/k6
 	@echo "Installing xk6"
 	go install go.k6.io/xk6/cmd/xk6@latest
-	xk6 --version
 
 .PHONY: init
 init: $(BUILD_DIR) $(REPORT_DIR)

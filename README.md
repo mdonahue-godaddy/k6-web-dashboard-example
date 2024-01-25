@@ -13,7 +13,46 @@ This document assumes a certain set of commonly used tools such as npm, git, mak
 
 ### MacOS:
 
-    make 4macos
+    $ make 4macos
+
+    Installing k6
+    brew install k6
+    ==> Downloading https://ghcr.io/v2/homebrew/core/k6/manifests/0.48.0
+    Already downloaded: /Users/mdonahue/Library/Caches/Homebrew/downloads/5f78a3b600e1851c9f64158c32288056fbf9e8ad88cc00e69745fcb25bea5894--k6-0.48.0.bottle_manifest.json
+    ==> Fetching k6
+    ==> Downloading https://ghcr.io/v2/homebrew/core/k6/blobs/sha256:0300bccfe5036402445750a9548d07852adda0a309b952463c41665b6bf7c55a
+    Already downloaded: /Users/mdonahue/Library/Caches/Homebrew/downloads/5c649857262eccc7c0d29a38634c644f4e920ffeac5b7e42f9da23a279d3392a--k6--0.48.0.arm64_sonoma.bottle.tar.gz
+    ==> Verifying checksum for '5c649857262eccc7c0d29a38634c644f4e920ffeac5b7e42f9da23a279d3392a--k6--0.48.0.arm64_sonoma.bottle.tar.gz'
+    ==> Pouring k6--0.48.0.arm64_sonoma.bottle.tar.gz
+    /usr/bin/env tar --extract --no-same-owner --file /Users/mdonahue/Library/Caches/Homebrew/downloads/5c649857262eccc7c0d29a38634c644f4e920ffeac5b7e42f9da23a279d3392a--k6--0.48.0.arm64_sonoma.bottle.tar.gz --directory /private/tmp/d20240125-38212-l80kx4
+    /usr/bin/env cp -pR /private/tmp/d20240125-38212-l80kx4/k6/. /opt/homebrew/Cellar/k6
+    ln -s ../../Cellar/k6/0.48.0/etc/bash_completion.d/k6 k6
+    ln -s ../Cellar/k6/0.48.0/bin/k6 k6
+    ln -s ../../../Cellar/k6/0.48.0/share/fish/vendor_completions.d/k6.fish k6.fish
+    ln -s ../../../Cellar/k6/0.48.0/share/zsh/site-functions/_k6 _k6
+    ==> Caveats
+    zsh completions have been installed to:
+    /opt/homebrew/share/zsh/site-functions
+    ==> Summary
+    🍺  /opt/homebrew/Cellar/k6/0.48.0: 8 files, 40.9MB
+    k6 --version
+    k6 v0.48.0 (go1.21.5, darwin/arm64)
+    Installing tsc TypeScript compiler
+    npm install -g typescript
+
+    changed 1 package in 424ms
+    tsc --version
+    Version 5.3.3
+    Installing node types
+    npm install -g @types/node
+
+    changed 2 packages in 363ms
+    Installing k6 types
+    npm install -g @types/k6
+
+    changed 1 package in 547ms
+    Installing xk6
+    go install go.k6.io/xk6/cmd/xk6@latest
 
 
 ## Running
