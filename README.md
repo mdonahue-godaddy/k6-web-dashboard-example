@@ -56,8 +56,10 @@ k6 is developed by Grafana Labs and the community.
 
 ### Other Demos (in no particular order)
 
+* [k6 Channel on YouTube](https://www.youtube.com/@k6io)
 * [An overview of load testing with k6](https://www.youtube.com/watch?v=ncxCIuo5tUU)
 * [Load Tests as Code: An introduction to k6](https://www.youtube.com/watch?v=Y2ba-mhNV90)
+* [How to analyze load testing results with k6](https://www.youtube.com/watch?v=IW7I_vWV93A)
 * [How to use k6 Cloud](https://www.youtube.com/watch?v=eCv1XshEpDI)
 * [Use k6 Load Testing to Manage Performance in Production](https://www.youtube.com/watch?v=aC45-LjDueM)
 * [Performance Testing with K6 Demo](https://www.youtube.com/watch?v=5hYjwKAtewc)
