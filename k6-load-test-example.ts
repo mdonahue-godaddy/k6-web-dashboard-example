@@ -86,33 +86,3 @@ export default () => {
     sleep(1);
   }
 };
-
-// HowTo Run:
-// ----------
-//
-// Install (MacOS):
-// brew install tsc
-// brew install k6
-// npm install @types/node
-// npm install @types/k6
-//
-// Run locally:
-//   tsc k6-load-test-example.ts
-//
-//   k6 run ./k6-load-test-example.js --log-output file=load-test-example.log --verbose
-//
-
-//
-// NOTE: 'tsc' will generate TS2307 errors similar to the following, as long
-//       as the .js file is created you can safely ignore these errors:
-// -------------------------------------------------------------------------
-//k6-load-test-example.ts:6:28 - error TS2307: Cannot find module 'https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js' or its corresponding type declarations.
-//
-//6 import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
-//                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-//k6-load-test-example.ts:7:29 - error TS2307: Cannot find module 'https://jslib.k6.io/k6-summary/0.0.1/index.js' or its corresponding type declarations.
-//
-//7 import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
-//                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ...
