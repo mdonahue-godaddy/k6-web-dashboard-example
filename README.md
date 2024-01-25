@@ -1,5 +1,6 @@
 # k6-web-dashboard-example
-Grafan K6 web dashboard based load testing.
+
+This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension into a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](## Additional Resources) section below for more information.
 
 This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.
 
@@ -8,7 +9,7 @@ This example uses TypeScript to generate JavaScript code that is compiled dynami
 
 ### Assumptions
 
-    This document assume a certain set of commonly used tools such as git, make, and go have already been installed.
+    This document assumes a certain set of commonly used tools such as git, make, and go have already been installed.
 
 ### MacOS:
 
@@ -40,6 +41,10 @@ k6 is an open source extensible load testing tool built and designed for develop
 [k6 Home Page](https://k6.io/)
 
 [k6 Docuementation](https://grafana.com/docs/k6/latest/)
+
+[k6 Integrations & Tools](https://k6.io/docs/integrations/)
+
+[k6 Extentions](https://k6.io/docs/extensions/)
 
 [k6 Examples](https://k6.io/docs/examples/)
 
