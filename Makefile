@@ -37,6 +37,22 @@ $(BUILD_DIR):
 $(REPORT_DIR):
 	mkdir -p $@
 
+.PHONY: 4macos
+4macos:
+	@echo "Installing k6"
+	brew install k6
+	k6 --version
+	@echo "Installing tsc TypeScript compiler"
+	npm install -g typescript
+	tsc --version
+	@echo "Installing node types"
+	npm install -g @types/node
+	@echo "Installing k6 types"
+	npm install -g @types/k6
+	@echo "Installing xk6"
+	go install go.k6.io/xk6/cmd/xk6@latest
+	xk6 --version
+
 .PHONY: dep
 dep:
 	@echo "Installing xk6"

@@ -9,17 +9,11 @@ This repsitory is one example of how you can implement a simple and purely open 
 
 ### Assumptions
 
-This document assumes a certain set of commonly used tools such as git, make, and go have already been installed.
+This document assumes a certain set of commonly used tools such as npm, git, make, go, and homebrew(MacOS) have already been installed.
 
 ### MacOS:
 
-    brew install tsc
-    brew install k6
-
-    npm install @types/node
-    npm install @types/k6
-
-    go install go.k6.io/xk6/cmd/xk6@latest
+    make 4macos
 
 
 ## Running
