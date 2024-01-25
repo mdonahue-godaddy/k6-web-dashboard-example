@@ -1,6 +1,6 @@
 # k6-web-dashboard-example
 
-This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension within a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more resources.
+This repsitory is one example of how you can implement a simple and purely open source instance of k6 with the xk6 web dashboard extension within a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more resources.
 
 `NOTE: This example uses TypeScript which is compiled into JavaScript.  You can use JavaScript directly if you prefer.`
 
@@ -116,8 +116,8 @@ k6 is developed by Grafana Labs and the community.
 * [How to analyze load testing results with k6](https://www.youtube.com/watch?v=IW7I_vWV93A)
 * [How to use k6 Cloud](https://www.youtube.com/watch?v=eCv1XshEpDI)
 * [Use k6 Load Testing to Manage Performance in Production](https://www.youtube.com/watch?v=aC45-LjDueM)
-* [Performance Testing with K6 Demo](https://www.youtube.com/watch?v=5hYjwKAtewc)
-* [Automated Load Testing with K6](https://www.youtube.com/watch?v=3TpJItd5JwY)
+* [Performance Testing with k6 Demo](https://www.youtube.com/watch?v=5hYjwKAtewc)
+* [Automated Load Testing with k6](https://www.youtube.com/watch?v=3TpJItd5JwY)
 
 
 ### Commercial Resources

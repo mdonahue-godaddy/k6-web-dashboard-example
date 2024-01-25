@@ -33,10 +33,9 @@ export const options: Options = {
   },
   maxRedirects: 0,
   stages: [
-    { duration: '30s', target: 50 },
-    { duration: '60s', target: 100 },
-    { duration: '10s', target: 20 },
-    { duration: '60s', target: 100 },
+    { duration: '30s', target: 200 },
+    { duration: '10s', target: 100 },
+    { duration: '60s', target: 200 },
   ],
   thresholds: {
     http_req_duration: ['p(95)<100', 'p(99)<400', 'p(99.9)<800'], // P(%) requests must complete below (nnnn)ms
