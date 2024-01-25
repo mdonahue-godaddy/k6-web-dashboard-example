@@ -39,30 +39,34 @@ This document assumes a certain set of commonly used tools such as git, make, an
 
 TypeScript is a strongly typed programming language that builds on and compiles into JavaScript.
 
-[TypeScript](https://www.typescriptlang.org/)
+* [TypeScript](https://www.typescriptlang.org/)
 
 
 k6 is an open source extensible load testing tool built and designed for developers to allow teams to create tests-as-code, integrate performance tests as part of the software development lifecycle, and help users test, analyze, and fix performance issues in their applications.
 
-[k6 Home Page](https://k6.io/)
+k6 takes advantage of Go's speed, power, and efficiency while providing the flexibility of using JavaScript APIs within your test scripts.
 
-[k6 Docuementation](https://grafana.com/docs/k6/latest/)
+k6 is developed by Grafana Labs and the community.
 
-[k6 Integrations & Tools](https://k6.io/docs/integrations/)
+* [k6 Home Page](https://k6.io/)
 
-[k6 Extentions](https://k6.io/docs/extensions/)
+* [k6 Docuementation](https://grafana.com/docs/k6/latest/)
 
-[k6 Examples](https://k6.io/docs/examples/)
+* [k6 Integrations & Tools](https://k6.io/docs/integrations/)
 
-[k6 GitHub Repository](https://github.com/grafana/k6)
+* [k6 Extentions](https://k6.io/docs/extensions/)
 
-[xk6 GitHub Repository](https://github.com/grafana/xk6)    used to rebuild k6 binary with web-dasboard plugin.
+* [k6 Examples](https://k6.io/docs/examples/)
 
-[xk6 dashboard plugin GitHub Repository](https://github.com/grafana/xk6-dashboard)
+* [k6 GitHub Repository](https://github.com/grafana/k6)
 
-[xk6 web dashboard plugin documentation](https://github.com/grafana/xk6-dashboard/blob/master/cmd/k6-web-dashboard/README.md)
+* [xk6 GitHub Repository](https://github.com/grafana/xk6)    used to rebuild k6 binary with web-dasboard plugin.
 
-https://github.com/BasouKazuma/demo-load-test-k6
+* [xk6 dashboard plugin GitHub Repository](https://github.com/grafana/xk6-dashboard)
+
+* [xk6 web dashboard plugin documentation](https://github.com/grafana/xk6-dashboard/blob/master/cmd/k6-web-dashboard/README.md)
+
+* [Another example - github.com/BasouKazuma/demo-load-test-k6](https://github.com/BasouKazuma/demo-load-test-k6)
 
 
 ### Other Demos (in no particular order)
