@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<testsuites tests="3" failures="0">
+<testsuite name="K6 Load Testing Example Thresholds" tests="3" failures="0"><testcase name="http_req_duration - p(99)&lt;400" />
+<testcase name="http_req_duration - p(99.9)&lt;800" />
+<testcase name="http_req_duration - p(95)&lt;100" />
+</testsuite >
+</testsuites >
