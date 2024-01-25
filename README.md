@@ -1,6 +1,6 @@
 # k6-web-dashboard-example
 
-This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension into a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the `[Additional Resources](#Additional-Resources)` section below for more information.
+This repsitory is one example of how you can implement a simple and purely open source instance of K6 with the xk6 web dashboard extension into a GitHub CI/CD workflow.  There are many other ways to effectively use k6.  Please see the [Additional Resources](#additional-resources) section below for more information.
 
 This example uses TypeScript to generate JavaScript code that is compiled dynamically by k6 and ran internally within k6.
 
