@@ -61,39 +61,44 @@ run: $(K6) $(JSCRIPT)
 	cd $(REPORT_DIR)
 	$(K6) version
 	$(K6) run --out=$(K6_DASHBOARD_CMD)=export=$(K6_REPORT_FILENAME) --out=json=$(K6_JSON_FILENAME) --log-output=file=$(LOG_FILENAME) $(JSCRIPT) --verbose
-
-.PHONY: replay
-replay: $(REPORT_DIR) $(K6)
-	@echo "Running replay"
-	cd $(REPORT_DIR)
-	$(K6) version
-	$(K6) $(K6_DASHBOARD_CMD) replay --export $(K6_REPORT_FILENAME) $(K6_JSON_FILENAME)
-
-.PHONY: run-save
-run-save: run
-	@echo "Running save reports"
-	mkdir -p $(DOCS_PATH)
-	cp $(BASE_PATH)/*                   $(DOCS_PATH)
-	cp $(K6_REPORT_FILENAME)           $(DOCS_PATH)index.html
-	cp $(DOCS_LOADTEST_PATH)README.md   $(DOCS_PATH)README.md
-	echo "[$(BUILD_TS)](/reports/load-testing/$(BUILD_TS))/index.html" >> $(DOCS_PATH)README.md
-	echo "" >> $(DOCS_PATH)README.md
+#
+# abandon in place - keeping for reference
+#
+#.PHONY: replay
+#replay: $(REPORT_DIR) $(K6)
+#	@echo "Running replay"
+#	cd $(REPORT_DIR)
+#	$(K6) version
+#	$(K6) $(K6_DASHBOARD_CMD) replay --export $(K6_REPORT_FILENAME) $(K6_JSON_FILENAME)
+#
+#.PHONY: save
+#save: run
+#	@echo "Running save reports"
+#	mkdir -p $(DOCS_PATH)
+#	cp $(BASE_PATH)/*                   $(DOCS_PATH)
+#	cp $(K6_REPORT_FILENAME)           $(DOCS_PATH)index.html
+#	cp $(DOCS_LOADTEST_PATH)README.md   $(DOCS_PATH)README.md
+#	echo "[$(BUILD_TS)](/reports/load-testing/$(BUILD_TS))/index.html" >> $(DOCS_PATH)README.md
+#	echo "" >> $(DOCS_PATH)README.md
 # add new files to git
-	git add -v -f $(DOCS_PATH)/*
-	# copy README.md to other subdirectories
-	cp $(DOCS_PATH)/README.md  $(DOCS_BASE_PATH)/README.md
-	cp $(DOCS_PATH)/README.md  $(DOCS_REPORTS_PATH)/README.md
-	cp $(DOCS_PATH)/README.md  $(DOCS_LOADTEST_PATH)/README.md
+#	git add -v -f $(DOCS_PATH)/*
+# copy README.md to other subdirectories
+#	cp $(DOCS_PATH)/README.md  $(DOCS_BASE_PATH)/README.md
+#	cp $(DOCS_PATH)/README.md  $(DOCS_REPORTS_PATH)/README.md
+#	cp $(DOCS_PATH)/README.md  $(DOCS_LOADTEST_PATH)/README.md
 # add updated files to git
-	git add -v -f $(DOCS_BASE_PATH)/README.md
-	git add -v -f $(DOCS_REPORTS_PATH)/README.md
-	git add -v -f $(DOCS_LOADTEST_PATH)/README.md
+#	git add -v -f $(DOCS_BASE_PATH)/README.md
+#	git add -v -f $(DOCS_REPORTS_PATH)/README.md
+#	git add -v -f $(DOCS_LOADTEST_PATH)/README.md
 # git commit and push
 #	git commit -v -m "Add new HTML Load Testing Report" --no-verify
 #	git push origin $(BRANCH) -f --no-verify
+#
+#.PHONY: run-save
+#run-save: run save
 
 .PHONY: all
-all: run-save
+all: run
 
 .PHONY: usage
 usage:
@@ -104,7 +109,7 @@ usage:
 	@echo "  clean - clean up build artifacts"
 	@echo "  help - show usage"
 	@echo "  run - run load test reports"
-	@echo "  run-save - run and save reports (commit currently deactivated)"
+	@echo "  run-save - run and save reports (commit/push currently deactivated)"
 	@echo "  usage - show this information"
 
 .PHONY: help
