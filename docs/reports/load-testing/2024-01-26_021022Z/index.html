@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .collapsible {
+                background-color: #777777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #555555;
+            }
+
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+
+            iframe[simple] {
+                position: static;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 900px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            iframe[advanced] {
+                position: static;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 4000px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Load Testing Results</h2>
+
+        <p>Simple:</p>
+        <button type="button" class="collapsible">Simple HTML Report</button>
+        <div class="content">
+            <iframe src="./k6-load-test-example.html" simple></iframe>
+            Artifacts: <a href="./k6-load-test-example.json">JSON</a>&nbsp;<a href="./k6-load-test-example.log">Log</a>&nbsp;<a href="./k6-load-test-example.xml">XML</a>
+        </div>
+
+        <p>Web Dashboard:</p>
+        <button type="button" class="collapsible">Advanced Web Dashboard</button>
+        <div class="content">
+            <iframe src="./k6-web-dashboard-report.html" advanced></iframe>
+            Artifacts: <a href="./k6-web-dashboard-report.json">JSON</a>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var idx = 0;
+            for (idx = 0; idx < coll.length; idx++) {
+                coll[idx].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
