@@ -73,7 +73,7 @@ interface Page {
 export default () => {
   const pages: Page[] = [
     { tag: 'GET http://google.com/',  url: 'http://google.com/', status: 301, duration: 500 },
-    { tag: 'GET https://google.com/',  url: 'https://google.com/', status: 301, duration: 500 },
+    { tag: 'GET https://google.com/',  url: 'https://google.com/', status: 302, duration: 500 },
     { tag: 'GET http://www.google.com/', url: 'http://www.google.com/', status: 200, duration: 1000 },
     { tag: 'GET https://www.google.com/', url: 'https://www.google.com/', status: 200, duration: 1000 },
   ]
