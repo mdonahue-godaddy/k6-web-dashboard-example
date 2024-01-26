@@ -64,7 +64,7 @@ export const options: Options = {
 };
 
 interface Page {
-  tag: string; // label/tag for the page
+  label: string; // label for the page
   url: string; // http url
   status: number; // expeced http status code
   duration: number; // expected request duration in milliseconds
@@ -72,10 +72,10 @@ interface Page {
 
 export default () => {
   const pages: Page[] = [
-    { tag: 'GET http://google.com/',  url: 'http://google.com/', status: 301, duration: 500 },
-    { tag: 'GET https://google.com/',  url: 'https://google.com/', status: 302, duration: 500 },
-    { tag: 'GET http://www.google.com/', url: 'http://www.google.com/', status: 200, duration: 1000 },
-    { tag: 'GET https://www.google.com/', url: 'https://www.google.com/', status: 200, duration: 1000 },
+    { label: 'GET http://google.com/',  url: 'http://google.com/', status: 301, duration: 800 },
+    { label: 'GET https://google.com/',  url: 'https://google.com/', status: 302, duration: 800 },
+    { label: 'GET http://www.google.com/', url: 'http://www.google.com/', status: 200, duration: 1000 },
+    { label: 'GET https://www.google.com/', url: 'https://www.google.com/', status: 200, duration: 1000 },
   ]
 
   for (const page of pages) {
@@ -90,10 +90,10 @@ export default () => {
         // 'X-Shopper-Id': '',
       },
       tags: {
-        "method": "GET",
-        "name": page.tag,
-        "status": String(page.status),
-        "url": page.url,
+        "label_tag": page.label,
+        "method_tag": "GET",
+        "url_tag": page.url,
+        "status_tag": String(page.status),
       },
     });
 
