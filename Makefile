@@ -86,9 +86,9 @@ run: $(K6) $(JSCRIPT)
 #save: run
 #	@echo "Running save reports"
 #	mkdir -p $(DOCS_PATH)
-#	cp $(BASE_PATH)/*                   $(DOCS_PATH)
-#	cp $(K6_REPORT_FILENAME)           $(DOCS_PATH)index.html
-#	cp $(DOCS_LOADTEST_PATH)README.md   $(DOCS_PATH)README.md
+#	cp $(BASE_PATH)/*                      $(DOCS_PATH)
+#	cp $(DOCS_LOADTEST_PATH)template.html  $(DOCS_PATH)index.html
+#	cp $(DOCS_LOADTEST_PATH)README.md      $(DOCS_PATH)README.md
 #	echo "[$(BUILD_TS)](/reports/load-testing/$(BUILD_TS))/index.html" >> $(DOCS_PATH)README.md
 #	echo "" >> $(DOCS_PATH)README.md
 # add new files to git
