@@ -113,11 +113,6 @@ jobs:
           ./k6 version
           ./k6 run --out=web-dashboard=export=${{ env.REPORT }}/k6-web-dashboard-report.html --out=json=${{ env.REPORT }}/k6-web-dashboard-report.json --log-output=file=${{ env.REPORT }}/k6-load-test-example.log k6-load-test-example.js --verbose
 
-
-          cp $(BASE_PATH)/*                      $(DOCS_PATH)
-          cp $(DOCS_LOADTEST_PATH)template.html  $(DOCS_PATH)index.html
-          cp $(DOCS_LOADTEST_PATH)README.md      $(DOCS_PATH)README.md
-
       - name: version the report files
         run: |
           set -x
