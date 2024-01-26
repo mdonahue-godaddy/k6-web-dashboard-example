@@ -52,8 +52,10 @@ export const options: Options = {
 
 export default () => {
   const pages: Page[] = [
-    { tag: 'GET http://godaddy.com',  method: 'GET', url: 'http://godaddy.com', status: 200, duration: 200 },
-    { tag: 'GET https://godaddy.com', method: 'GET', url: 'https://godaddy.com', status: 200, duration: 200 },
+    { tag: 'GET http://google.com/',  method: 'GET', url: 'http://google.com/', status: 301, duration: 200 },
+    { tag: 'GET https://google.com/',  method: 'GET', url: 'https://google.com/', status: 301, duration: 200 },
+    { tag: 'GET http://www.google.com/', method: 'GET', url: 'http://www.google.com/', status: 200, duration: 200 },
+    { tag: 'GET https://www.google.com/', method: 'GET', url: 'https://www.google.com/', status: 200, duration: 200 },
   ]
 
   for (const page of pages) {
