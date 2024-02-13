@@ -134,6 +134,9 @@ jobs:
           cp ${{ env.REPORT }}/*                                 ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/
           cp ${{ env.DOCS }}/reports/load-testing/template.html  ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/index.html
           cp ${{ env.DOCS }}/reports/load-testing/README.md      ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
+          # For now, remove JSON file.  Reason on next line.
+          # remote: error: File docs/reports/load-testing/2024-02-13_214728Z/k6-web-dashboard-report.json is 109.04 MB; this exceeds GitHub's file size limit of 100.00 MB
+          rm ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/k6-web-dashboard-report.json
           echo "[${{ env.TS }}](https://mdonahue-godaddy.github.io/k6-web-dashboard-example/reports/load-testing/${{ env.TS }}/index.html)" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
           echo "" >> ${{ env.DOCS }}/reports/load-testing/${{ env.TS }}/README.md
           # copy README.md to other subdirectories
