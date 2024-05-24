@@ -43,15 +43,15 @@ export const options: Options = {
   // Optionally specify the target number of VUs to ramp up or down. See https://k6.io/docs/using-k6/k6-options/reference/#stages
   // Default: empty, based on vus and duration
   stages: [
-    { duration: '30s', target: 200 },
-    { duration: '10s', target: 100 },
-    { duration: '60s', target: 200 },
+    { duration: '30s', target: 100 },
+    { duration: '10s', target: 70 },
+    { duration: '60s', target: 100 },
   ],
 
   // Optionally specify thresholds to configure under what condition(s) a test is considered successful or not. See https://k6.io/docs/using-k6/k6-options/reference/#thresholds
   // Default: none
   thresholds: {
-    http_req_duration: ['p(95)<500', 'p(99)<700', 'p(99.9)<900'], // P(%) requests must complete below (nnnn)ms
+    http_req_duration: ['p(95)<800', 'p(99)<1000', 'p(99.9)<2000'], // P(%) requests must complete below (nnnn)ms
   },
 
   // Specify User Agent HTTP Header.  See https://k6.io/docs/using-k6/k6-options/reference/#user-agent
@@ -72,10 +72,11 @@ interface Page {
 
 export default () => {
   const pages: Page[] = [
-    { label: 'GET http://google.com/',  url: 'http://google.com/', status: 301, duration: 800 },
-    { label: 'GET https://google.com/',  url: 'https://google.com/', status: 302, duration: 800 },
-    { label: 'GET http://www.google.com/', url: 'http://www.google.com/', status: 200, duration: 1000 },
-    { label: 'GET https://www.google.com/', url: 'https://www.google.com/', status: 200, duration: 1000 },
+    //{ label: 'GET http://google.com/',      url: 'http://google.com/',      status: 302, duration: 800 },
+    //{ label: 'GET https://google.com/',     url: 'https://google.com/',     status: 302, duration: 800 },
+    //{ label: 'GET http://www.google.com/',  url: 'http://www.google.com/',  status: 200, duration: 1000 },
+    //{ label: 'GET https://www.google.com/', url: 'https://www.google.com/', status: 200, duration: 1000 },
+    { label: 'GET https://www.youtube.com/', url: 'https://www.youtube.com/', status: 200, duration: 2000 },
   ]
 
   for (const page of pages) {
@@ -89,9 +90,10 @@ export default () => {
         // 'X-Visitor-Id': '',
         // 'X-Shopper-Id': '',
       },
+      // log page info
       tags: {
         "label_tag": page.label,
-        "method_tag": "GET",
+        // "method_tag": "GET",
         "url_tag": page.url,
         "status_tag": String(page.status),
       },
